@@ -4,8 +4,8 @@
 		<title>Dimension by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -25,7 +25,7 @@
 									<li><a href="https://github.com/Jayeshparsnani" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 								<p>Jayesh Parsnani, Experienced Computer Science graduate with a Master's degree from The University of Texas at Arlington. Skilled in Python, Java, and R, with expertise in data mining, cloud computing, and machine learning. Proven track record of successful projects and research experience as a Graduate Research Assistant. Seeking opportunities to leverage my skills and contribute to innovative projects in the tech industry.</p>
-								<a href="{{ url_for('static', filename='assets/JayeshParsnaniResume.docx') }}" style = "text-decoration:none"><button>View My Resume</button></a>
+								<a href="assets/JayeshParsnaniResume.docx" style = "text-decoration:none"><button>View My Resume</button></a>
 
 							</div>
 						</div>
@@ -136,7 +136,7 @@
 									<li>Orchestrated an entire process using IoT-based Raspberry Pi technology for users to park their vehicles efficiently and reducing parking time by 25%.</li>
 									<li>Developed an automated license plate recognition system that processed 100+ images daily, using camera modules and cutting-edge image processing techniques which extract text and store it in a SQL database; reduced manual data entry time by 80% and increased processing speed by 50%. </li> 
 									<li>Integrated a robust security feature using Twilio API which notifies users via text message in case their vehicle is relocated from the original parking location which is sensed by Ultrasonic sensor whether user car is parked or not.</li>
-									<li>Project video: <a href = "{{ url_for('static', filename='assets/CarParkingSystem.mov') }}">demo</a></li>
+									<li>Project video: <a href = "assets/CarParkingSystem.mov">demo</a></li>
 								</ul>
 								<ul>
 									<h3>Hotel Management System</h3>
@@ -150,7 +150,7 @@
 							<article id="contact">
 								<p>Unavaliable because of security issues... Please reach out to me at parsnani72@gmail.com. Thank you</p>
 								<h2 class="major">Contact</h2>
-								<form method="post" action="/contact">
+								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -184,11 +184,11 @@
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='assets/js/browser.min.js')}}"></script>
-			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js')}}"></script>
-			<script src="{{ url_for('static', filename='assets/js/util.js')}}"></script>
-			<script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
