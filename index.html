@@ -74,7 +74,7 @@
 								</ul>
 								<br>
 								<ul>
-									<h3 style="margin-bottom: 0;display: inline-block;">Graduate Research Assistant</h3> <p style=" margin-bottom: 0;margin-left:45px;display: inline-block;">February 2023 – May 2022</p>
+									<h3 style="margin-bottom: 0;display: inline-block;">Graduate Research Assistant</h3> <p style=" margin-bottom: 0;margin-left:45px;display: inline-block;">February 2022 – May 2022</p>
 									<h4 style="margin-bottom: 10;display: inline-block;">Raid Labs (Department of Research)</h4> <p style="margin-bottom: 10px;margin-left:110px;display: inline-block;">Arlington, TX </p>          
 									<li>Co-ordinated, Collaborative work with team of 2 and a Ph.D. professor guided by Dr. ERICK C. JONES on an AI technology project funded by the NSF. </li>
 									<li>Refined a deep learning object detection model (Single shot detector) that can detect pill confirmation with an accuracy ranging between 80 to 95%.</li> 
@@ -147,30 +147,29 @@
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
-								<p>Unavaliable because of security issues... Please reach out to me at parsnani72@gmail.com. Thank you</p>
-								<h2 class="major">Contact</h2>
-								<form method="post" action="index.html">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
+						<article id="contact">
+							<h2 class="major">Contact</h2>
+							<form method="post" action="#" id="contact-form">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul> 
-								</form>
-							</article>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul> 
+							</form>
+						</article>
 					</div>
 
 				<!-- Footer -->
@@ -189,6 +188,36 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 
+			<script type="text/javascript">
+				(function(){
+				   emailjs.init("hiL0xZHjRrCPK3iu3");
+				})();
+			 </script>
+			<script type="text/javascript">
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+					event.preventDefault();
+			 
+					// Get the form data
+					const name = document.getElementById('name').value;
+					const email = document.getElementById('email').value;
+					const message = "From: " + email + "\n\n" + document.getElementById('message').value;
+			 
+					// Use Email.js to send the email
+					emailjs.send("service_8iyoqik", "template_1tgvtti", {
+						from_name: name,
+						from_email: email,
+						message: message,
+						to_email:"parsnani71@gmail.com"
+					})
+					.then(function(response) {
+						alert("Your message was sent successfully!");
+						document.getElementById('contact-form').reset();
+					}, function(error) {
+						alert("An error occurred while sending the message: " + error.text);
+					});
+				});
+			 </script>
 	</body>
 </html>
