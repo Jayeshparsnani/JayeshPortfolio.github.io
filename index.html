@@ -6,6 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.message-icon {
+			position: relative;
+			/* display: inline-block; */
+			margin-left: 1300px;
+			}
+
+			.notification-count {
+			position: absolute;
+			top: -5px;
+			right: -5px;
+			width: 18px;
+			height: 18px;
+			background-color: red;
+			border-radius: 50%;
+			color: white;
+			font-size: 12px;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			}
+			#information-box {
+			display: none;
+			width: 230px;
+			height: 270px;
+			background-color: #585252;
+			position: absolute;
+			top: -260px;
+			left: 1090px;
+			padding: 20px;
+			}
+
+			.fa-envelope {
+			font-size: 24px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -18,14 +55,25 @@
 							<img src="images/jayesh.jpg" style="width:150px;height:150px"></img>
 						</div>
 						<div class="content">
-							<div class="inner">
+							<div>
+								<span class="message-icon" onclick="showInformation()">
+									<i class="fas fa-envelope"></i>
+									<a href="#"><span class="notification-count">1</span></a>
+								</span>
+							</div>
+							<div id="information-box">
+								<p style="font-size: 9px; ">Recently, I have learned Kafka, Docker which can be used in the Organization to transfer the data and download all the dependemcies in just one command and Tableau to make wonderful dashboards to display amazing results using the data. </p>
+								<span class="close-icon" onclick="hideInformation()"><i class="fas fa-times"></i></span>
+							</div>
+							  
+							<div class="inner" style="margin-top: -30px;">
 								<h1 style="display: inline-block;">Jayesh Parsnani</h1>
 								<ul style="display: inline-block;"class="icons">
 									<li><a href="https://www.linkedin.com/in/jayesh-parsnani/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/Jayeshparsnani" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 								<p>Jayesh Parsnani, Experienced Computer Science graduate with a Master's degree from The University of Texas at Arlington. Skilled in Python, Java, and R, with expertise in data mining, cloud computing, and machine learning. Proven track record of successful projects and research experience as a Graduate Research Assistant. Seeking opportunities to leverage my skills and contribute to innovative projects in the tech industry.</p>
-								<a href="assets/JayeshParsnaniResumeSDE.pdf" style="text-decoration:none"><button style="text-decoration:none">View Resume</button></a>
+								<a href="assets/JayeshParsnaniResumeSD.pdf" style="text-decoration:none"><button style="text-decoration:none">View Resume</button></a>
 								<a href="assets/CoverLetterSD.pdf" style="text-decoration:none"><button style="text-decoration:none">Cover Letter</button></a>
 
 							</div>
@@ -85,7 +133,7 @@
 								<br>
 								<ul>
 									<h3 style="margin-bottom: 0;display: inline-block;">Software Developer (Intern)</h3> <p style=" margin-bottom: 0;margin-left:210px;display: inline-block;">June 2019 – August 2019</p><br>
-									<h4 style="margin-bottom: 10;display: inline-block;">Trivia Software </h4> <p style="margin-bottom: 10px;text-indent:450px;display: inline-block;">Arlington, TX </p>          
+									<h4 style="margin-bottom: 10;display: inline-block;">Trivia Software </h4> <p style="margin-bottom: 10px;text-indent:460px;display: inline-block;">Thane, MH </p>          
 									<li>Exposed to the various Java SE 8 related technologies and implemented Management System Design application using MySQL, and Java Hierarchies.</li>
 									<li>Managed and applied Create, Read, Update and Delete (CRUD) operations in parallel for employee records over 1000+ employees within organization.</li> 
 									<li>Programmed and integrated a new functionality which triggered a pop-up tune whenever a record was eliminated through the deletion operation.</li>
@@ -219,6 +267,15 @@
 						alert("An error occurred while sending the message: " + error.text);
 					});
 				});
+				function showInformation() {
+					document.getElementById("information-box").style.display = "block";
+				}
+
+				function hideInformation() {
+					document.getElementById("information-box").style.display = "none";
+				}
+
+
 			 </script>
 	</body>
 </html>
